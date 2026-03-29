@@ -1,0 +1,15 @@
+[Unit]
+Description=Sneaker Price Tracker Bot v2 (WB + Яндекс.Маркет)
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/sneaker_bot
+EnvironmentFile=/root/sneaker_bot/.env
+ExecStart=/root/sneaker_bot/venv/bin/python3 /root/sneaker_bot/bot.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
